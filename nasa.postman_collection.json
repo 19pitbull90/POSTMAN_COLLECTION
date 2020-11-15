@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "93f96729-312a-4d56-b81b-2f3e53c6aa3e",
+		"name": "nasa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.nasa.gov/planetary/apod?api_key=FnFhlkdfaRbwhYTxFyaXEEdUnVLrSkzFF6KmwMv5&hd=false",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a6ada206-8691-428e-be91-bf4b557d5152",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=FnFhlkdfaRbwhYTxFyaXEEdUnVLrSkzFF6KmwMv5&hd=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "FnFhlkdfaRbwhYTxFyaXEEdUnVLrSkzFF6KmwMv5"
+						},
+						{
+							"key": "hd",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
